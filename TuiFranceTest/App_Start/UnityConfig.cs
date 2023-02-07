@@ -14,7 +14,7 @@ namespace TuiFranceTest
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
 
             // register all your components with the container here  
             //This is the important line to edit  

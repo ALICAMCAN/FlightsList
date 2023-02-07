@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Device.Location;
-using TuiFranceTest.Models;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Security.AccessControl;
-using System.Xml.Linq;
 
 namespace TuiFranceTest.Bal.Models
 {

@@ -8,8 +8,8 @@ namespace TuiFranceTest.Bal
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
-            
+            var container = new UnityContainer();
+
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

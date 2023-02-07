@@ -2,15 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TuiFranceTest.Bal.Models;
 using TuiFranceTest.Bal.IServices;
-
+using TuiFranceTest.Bal.Models;
 using TuiFranceTest.Dal;
 using TuiFranceTest.Models;
-using System.Data.Entity.Migrations;
 
 namespace TuiFranceTest.Bal.Services
 {
@@ -47,16 +45,16 @@ namespace TuiFranceTest.Bal.Services
         public bool CreateFlight(BusinessFlight flight)
         {
             bool created = false;
-                if (flight != null)
-                {
-                    if (flight.DepartureAirportIataCode == flight.ArrivalAirportIataCode)
-                        throw new Exception("DuplicateAirports");
+            if (flight != null)
+            {
+                if (flight.DepartureAirportIataCode == flight.ArrivalAirportIataCode)
+                    throw new Exception("DuplicateAirports");
 
-                    var dbFlight = _mapper.Map<BusinessFlight, Flight>(flight);
-                    _context.Flights.Add(dbFlight);
-                    _context.SaveChanges();
-                    created = true;
-                }
+                var dbFlight = _mapper.Map<BusinessFlight, Flight>(flight);
+                _context.Flights.Add(dbFlight);
+                _context.SaveChanges();
+                created = true;
+            }
             return created;
         }
 
@@ -64,7 +62,7 @@ namespace TuiFranceTest.Bal.Services
         {
             bool deleted = false;
             var flight = await _context.Flights.SingleOrDefaultAsync(f => f.Id == flightId);
-            if (flight != null) 
+            if (flight != null)
             {
                 _context.Flights.Remove(flight);
                 _context.SaveChanges();
@@ -79,16 +77,16 @@ namespace TuiFranceTest.Bal.Services
             bool updated = false;
 
             var dataFlight = _context.Flights.AsNoTracking().SingleOrDefault(f => f.Id == flight.Id);
-                if (dataFlight != null)
-                {
-                    if (flight.DepartureAirportIataCode == flight.ArrivalAirportIataCode)
-                        throw new Exception("DuplicateAirports");
+            if (dataFlight != null)
+            {
+                if (flight.DepartureAirportIataCode == flight.ArrivalAirportIataCode)
+                    throw new Exception("DuplicateAirports");
 
-                    var newDataFlight = _mapper.Map<BusinessFlight, Flight>(flight);
-                    _context.Flights.AddOrUpdate(newDataFlight);
-                    _context.SaveChanges();
-                    updated = true;
-                }
+                var newDataFlight = _mapper.Map<BusinessFlight, Flight>(flight);
+                _context.Flights.AddOrUpdate(newDataFlight);
+                _context.SaveChanges();
+                updated = true;
+            }
 
             return updated;
         }

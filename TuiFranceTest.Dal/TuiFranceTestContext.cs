@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using TuiFranceTest.Models;
 
 namespace TuiFranceTest.Dal
@@ -18,7 +12,7 @@ namespace TuiFranceTest.Dal
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Flight>().HasRequired(f => f.DepartureAirport).WithMany(f=>f.DepartureFlights).WillCascadeOnDelete(false);
+            modelBuilder.Entity<Flight>().HasRequired(f => f.DepartureAirport).WithMany(f => f.DepartureFlights).WillCascadeOnDelete(false);
             modelBuilder.Entity<Flight>().HasRequired(f => f.ArrivalAirport).WithMany(f => f.ArrivalFlights).WillCascadeOnDelete(false);
 
 
