@@ -1,0 +1,112 @@
+﻿@model IEnumerable<TuiFranceTest.Bal.Models.BusinessFlight>
+@using TuiFranceTest.Infrastructure
+<div id="flightsList">
+    <p>
+        <button id="addFlight" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+    </p>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureAirport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalAirport)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.DistanceDepartureArrival)</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartureAirport.IataCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArrivalAirport.IataCode)
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.DistanceDepartureArrival)</td>
+                <td>
+                    <button data-id="@item.Id" class="btn btn-primary update"><i class="fa fa-pencil"></i></button>
+                </td>
+                <td>
+                    <button data-id="@item.Id" class="btn btn-primary delete"><i class="fa fa-trash"></i></button>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<script type="text/javascript">
+    $(function () {
+        /*Add*/
+        var newFlightModal = $('#addFlightModal');
+        $('#addFlight').on('click', function (e) {
+            e.preventDefault();
+            openModalWithAjaxContent(newFlightModal, '@Url.AddFlight()');
+        });
+        /*Edit*/
+        var editFlightModal = $('#editFlightModal');
+        $('.update').on('click', function (e) {
+            var id = $(this).data("id");
+            e.preventDefault();
+            openModalWithAjaxContent(editFlightModal, '@Url.EditFlight()?flightId=' + id);
+        });
+        /*Delete*/
+        $('.delete').on('click', function (e) {
+                var flightId = $(e.currentTarget).data('id');
+                bootbox.confirm(
+                    {
+                        message: 'Voulez vous supprimer ce vol?',
+                        buttons: {
+                            confirm: { label: 'Supprimer', className: 'btn btn-primary' },
+                            cancel: { label: 'Annuler', className: 'btn btn-default' }
+                        },
+                        callback: function (result) {
+                            if (result) {
+                                $.ajax({
+                                    url: '@Url.DeleteFlight()',
+                                    type: 'POST',
+                                    cache: false,
+                                    data: { flightId: flightId },
+
+                                    success: function (response) {
+                                        if (response.success) {
+                                            $.notify({
+                                                message: "Vol supprimé"
+                                            }, {
+                                                type: 'success'
+                                            });
+                                            /*refresh*/
+                                            $('#flightsList').load('@Url.FlightsList()');
+                                        } else {
+                                            var msg = response.error;
+                                            $.notify({
+                                                message: msg
+                                            }, {
+                                                type: 'danger'
+                                            });
+                                        }
+                                    },
+                                    error: function (request, status, error) {
+                                        $.notify({
+                                            message: error
+                                        }, {
+                                            type: 'danger'
+                                        });
+                                    }
+                                });
+                            }
+                        }
+                    });
+            });
+    })
+</script>
+

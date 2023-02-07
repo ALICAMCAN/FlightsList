@@ -1,0 +1,37 @@
+﻿@model TuiFranceTest.Bal.Models.BusinessFlight
+@Html.AntiForgeryToken()
+@Html.HiddenFor(model => model.Id)
+<div class="form">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DepartureAirport, htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-12">
+            @Html.DropDownListFor(model => model.DepartureAirportIataCode, ViewBag.AirportsList as IEnumerable<SelectListItem>, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-12">
+            @Html.ValidationMessageFor(model => model.DepartureAirportIataCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ArrivalAirport, htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-12">
+            @Html.DropDownListFor(model => model.ArrivalAirportIataCode, ViewBag.AirportsList as IEnumerable<SelectListItem>, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-12">
+            @Html.ValidationMessageFor(model => model.ArrivalAirportIataCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-12">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-12">
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery-validate")

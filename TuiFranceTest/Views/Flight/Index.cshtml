@@ -1,0 +1,106 @@
+﻿
+@using TuiFranceTest.Bal.Models
+@using TuiFranceTest.Infrastructure
+
+@model IEnumerable<BusinessFlight>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<div class="jumbotron">
+    <h1>Liste des vols</h1>
+</div>
+<div class="row">
+    <div>
+        @{
+            Html.RenderAction("FlightsList", "Flight");
+        }
+    </div>
+    @Html.Partial("_AddFlightModal")
+    @Html.Partial("_EditFlightModal")
+</div>
+<div id="addFlightModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div id="flightModalContent" class="modal-content">
+
+        </div>
+    </div>
+</div>
+<div id="editFlightModal" class="modal" tabindex="-2" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div id="editFlightModalContent" class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#addFlightModal form").on("submit", function (e) {
+                e.preventDefault();
+                var that = $(this);
+                var validator = that.validate();
+                if (validator.numberOfInvalids() > 0) {
+                    return false;
+                }
+
+                $.ajax({
+                    url: that.attr("action"),
+                    type: 'POST',
+                    cache: false,
+                    data: that.serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#addFlightModal').modal('hide');
+                            $('#flightsList').load('@Url.FlightsList()');
+                            $.notify({
+                                message: 'Vol créé'
+                            }, {
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            $('#addFlightForm').html(result);
+                        }
+                    },
+                    error: function (request, status, error) {
+                        alert('Error : ' + request.responseText);
+                    }
+                });
+                return false;
+            });
+        $("#editFlightModal form").on("submit", function (e) {
+                e.preventDefault();
+                var that = $(this);
+                var validator = that.validate();
+                if (validator.numberOfInvalids() > 0) {
+                    return false;
+                }
+
+                $.ajax({
+                    url: that.attr("action"),
+                    type: 'POST',
+                    cache: false,
+                    data: that.serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#editFlightModal').modal('hide');
+                            $('#flightsList').load('@Url.FlightsList()');
+
+                            $.notify({
+                                message: 'Vol modifié'
+                            }, {
+                                type: 'success'
+                            });
+                        }
+                        else {
+                            $('#editFlightForm').html(result);
+                        }
+                    },
+                    error: function (request, status, error) {
+                        alert('Error : ' + request.responseText);
+                    }
+                });
+                return false;
+            });
+    })
+</script>
+

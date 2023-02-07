@@ -1,0 +1,94 @@
+﻿name;latitude_deg;longitude_deg;iata_code
+Halifax / Stanfield International Airport;44.8807983398;-63.5085983276;YHZ
+Ottawa Macdonald-Cartier International Airport;45.322498;-75.669197;YOW
+Quebec Jean Lesage International Airport;46.7911;-71.393303;YQB
+Montreal / Pierre Elliott Trudeau International Airport;45.4706001282;-73.7407989502;YUL
+Vancouver International Airport;49.193901062;-123.183998108;YVR
+Winnipeg / James Armstrong Richardson International Airport;49.909999847399995;-97.2398986816;YWG
+Calgary International Airport;51.113899231;-114.019996643;YYC
+Victoria International Airport;48.6469;-123.426003;YYJ
+St. John's International Airport;47.618598938;-52.7518997192;YYT
+Brussels Airport;50.901402;4.48444;BRU
+Berlin Brandenburg Airport;52.362247;13.500672;BER
+Frankfurt Airport;50.036521;8.561268;FRA
+Hannover Airport;52.461102;9.68508;HAJ
+Helsinki Vantaa Airport;60.3172;24.963301;HEL
+London Luton Airport;51.874698638916016;-0.36833301186561584;LTN
+London Gatwick Airport;51.148102;-0.190278;LGW
+London Heathrow Airport;51.4706;-0.461941;LHR
+Amsterdam Airport Schiphol;52.308601;4.76389;AMS
+Dublin Airport;53.428713;-6.262121;DUB
+Copenhagen Kastrup Airport;55.617900848389;12.656000137329;CPH
+Oslo Airport, Gardermoen;60.193901;11.1004;OSL
+Kraków John Paul II International Airport;50.077702;19.7848;KRK
+Stockholm-Arlanda Airport;59.651901245117;17.918600082397;ARN
+Riga International Airport;56.923599;23.9711;RIX
+Vilnius International Airport;54.634102;25.285801;VNO
+Hartsfield Jackson Atlanta International Airport;33.6367;-84.428101;ATL
+Nashville International Airport;36.1245002746582;-86.6781997680664;BNA
+Baltimore/Washington International Thurgood Marshall Airport;39.1754;-76.668297;BWI
+Ronald Reagan Washington National Airport;38.8521;-77.037697;DCA
+Denver International Airport;39.861698150635;-104.672996521;DEN
+Dallas Fort Worth International Airport;32.896801;-97.038002;DFW
+Newark Liberty International Airport;40.692501;-74.168701;EWR
+Washington Dulles International Airport;38.9445;-77.455803;IAD
+George Bush Intercontinental Houston Airport;29.984399795532227;-95.34140014648438;IAH
+John F Kennedy International Airport;40.639447;-73.779317;JFK
+Los Angeles International Airport;33.942501;-118.407997;LAX
+La Guardia Airport;40.777199;-73.872597;LGA
+Miami International Airport;25.79319953918457;-80.29060363769531;MIA
+Palm Beach International Airport;26.68320083618164;-80.09559631347656;PBI
+Philadelphia International Airport;39.87189865112305;-75.24109649658203;PHL
+Southwest Florida International Airport;26.53619956970215;-81.75520324707031;RSW
+Seattle–Tacoma International Airport;47.449162;-122.311134;SEA
+Orlando Sanford International Airport;28.777599334716797;-81.23750305175781;SFB
+San Francisco International Airport;37.61899948120117;-122.375;SFO
+Syracuse Hancock International Airport;43.11119842529297;-76.1063003540039;SYR
+Burgas Airport;42.56959915161133;27.515199661254883;BOJ
+Sofia Airport;42.696693420410156;23.411436080932617;SOF
+Varna Airport;43.232101;27.8251;VAR
+Zagreb Airport;45.7429008484;16.0687999725;ZAG
+Josep Tarradellas Barcelona-El Prat Airport;41.2971;2.07846;BCN
+Ibiza Airport;38.872898;1.37312;IBZ
+Adolfo Suárez Madrid–Barajas Airport;40.471926;-3.56264;MAD
+Málaga-Costa del Sol Airport;36.6749;-4.49911;AGP
+Palma de Mallorca Airport;39.551701;2.73881;PMI
+Bordeaux-Mérignac Airport;44.8283;-0.715556;BOD
+Toulouse-Blagnac Airport;43.629101;1.36382;TLS
+Lyon Saint-Exupéry Airport;45.725556;5.081111;LYS
+Marseille Provence Airport;43.439271922;5.22142410278;MRS
+Charles de Gaulle International Airport;49.012798;2.55;CDG
+Paris-Orly Airport;48.72333;2.37944;ORY
+Athens Eleftherios Venizelos International Airport;37.936401;23.9445;ATH
+Heraklion International Nikos Kazantzakis Airport;35.3396987915;25.180299758900002;HER
+Budapest Liszt Ferenc International Airport;47.42976;19.261093;BUD
+Cagliari Elmas Airport;39.251499;9.05428;CAG
+Milan Bergamo Airport;45.673901;9.70417;BGY
+Turin Airport;45.200802;7.64963;TRN
+Venice Marco Polo Airport;45.505299;12.3519;VCE
+Rome–Fiumicino Leonardo da Vinci International Airport;41.804532;12.251998;FCO
+Naples International Airport;40.886002;14.2908;NAP
+Malta International Airport;35.857498;14.4775;MLA
+Vienna International Airport;48.110298;16.5697;VIE
+Faro Airport;37.0144004822;-7.96590995789;FAO
+João Paulo II Airport;37.7411994934;-25.6979007721;PDL
+Humberto Delgado Airport (Lisbon Portela Airport);38.7813;-9.13592;LIS
+Geneva Cointrin International Airport;46.23809814453125;6.108950138092041;GVA
+Zürich Airport;47.458056;8.548056;ZRH
+İstanbul Atatürk Airport;40.971913;28.823714;ISL
+İstanbul Airport;41.261297;28.741951;IST
+Punta Cana International Airport;18.567399978599997;-68.36340332030001;PUJ
+Las Américas International Airport;18.42970085144;-69.668899536133;SDQ
+Faa'a International Airport;-17.553699;-149.606995;PPT
+Nouméa Magenta Airport;-22.258301;166.473007;GEA
+Christchurch International Airport;-43.48939895629883;172.53199768066406;CHC
+Cayenne – Félix Eboué Airport;4.819964;-52.361326;CAY
+Jorge Chávez International Airport;-12.0219;-77.114305;LIM
+Martinique Aimé Césaire International Airport;14.591;-61.003201;FDF
+Pointe-à-Pitre Le Raizet International  Airport;16.265301;-61.531799;PTP
+Princess Juliana International Airport;18.041;-63.108898;SXM
+Vladivostok International Airport;43.396256;132.148155;VVO
+Minsk National Airport;53.888071;28.039964;MSQ
+Brisbane International Airport;-27.384199142456055;153.11700439453125;BNE
+Melbourne International Airport;-37.673302;144.843002;MEL
+Sydney Kingsford Smith International Airport;-33.94609832763672;151.177001953125;SYD

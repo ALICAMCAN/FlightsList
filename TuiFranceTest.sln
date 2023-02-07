@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuiFranceTest", "TuiFranceTest\TuiFranceTest.csproj", "{8CD018A1-45BC-406F-A994-89ED9AA9C53F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9EAB3EF7-E568-451E-92FE-EB0B63052920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{B57C15CE-2AE6-458B-BF22-9E6DFEC63E17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{AEF663C4-7DFA-4BBC-BFA6-D086921280D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuiFranceTest.Dal", "TuiFranceTest.Dal\TuiFranceTest.Dal.csproj", "{1515DA19-BF86-48EF-9EE7-1B443FDCE86C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuiFranceTest.Models", "TuiFranceTest.Models\TuiFranceTest.Models.csproj", "{C22C0E5F-95B3-4BAE-926A-F105FC31548C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuiFranceTest.Bal", "TuiFranceTest.Bal\TuiFranceTest.Bal.csproj", "{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CD018A1-45BC-406F-A994-89ED9AA9C53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD018A1-45BC-406F-A994-89ED9AA9C53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD018A1-45BC-406F-A994-89ED9AA9C53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD018A1-45BC-406F-A994-89ED9AA9C53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1515DA19-BF86-48EF-9EE7-1B443FDCE86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1515DA19-BF86-48EF-9EE7-1B443FDCE86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1515DA19-BF86-48EF-9EE7-1B443FDCE86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1515DA19-BF86-48EF-9EE7-1B443FDCE86C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22C0E5F-95B3-4BAE-926A-F105FC31548C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22C0E5F-95B3-4BAE-926A-F105FC31548C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22C0E5F-95B3-4BAE-926A-F105FC31548C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22C0E5F-95B3-4BAE-926A-F105FC31548C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CD018A1-45BC-406F-A994-89ED9AA9C53F} = {9EAB3EF7-E568-451E-92FE-EB0B63052920}
+		{1515DA19-BF86-48EF-9EE7-1B443FDCE86C} = {AEF663C4-7DFA-4BBC-BFA6-D086921280D1}
+		{C22C0E5F-95B3-4BAE-926A-F105FC31548C} = {AEF663C4-7DFA-4BBC-BFA6-D086921280D1}
+		{1C385E5D-0B42-4EB4-8D4E-A6B741DA68F1} = {B57C15CE-2AE6-458B-BF22-9E6DFEC63E17}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54E34C76-DCFF-4E7A-8F59-AF19A4CFF575}
+	EndGlobalSection
+EndGlobal
